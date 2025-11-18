@@ -1,0 +1,538 @@
+:root{
+    --primary-color:#e6b6d3; 
+
+    --white-color: #f3dae9;
+    
+    --secundary-color:#bb478e;
+
+    --terciary-color:#b44088;
+
+    --quarternary-color:#d667a8;
+
+    --pink-color:#c45d9c;
+
+    --pink-gray: #bd97ae;
+
+    --pink-dark:#9c3772;
+
+    --gap:30px;
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Cinzel';
+    font-size: 2rem;
+    color: var(--primary-color);
+    line-height: 1.5;
+
+}
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Cormorant Garamond';
+
+}
+
+h1{
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+
+
+}
+
+h3{
+    font-size: 5rem;
+}
+
+h4{
+    font-size: 4.5rem;
+}
+
+h5{
+    font-size: 4rem;
+}
+
+h6{
+    font-size: 3.5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    margin-bottom: 2rem;
+}
+
+.main-bg{
+    background-image: url('../media/constelacao.svg');
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+    
+}
+
+.white-bg{
+    background-color: var(--white-color);
+
+}
+
+.secundary-color-bg{
+    background: var(--secundary-color);
+}
+
+.pink-color{
+    background: var(--pink-color);
+    color: var(--white-color);
+}
+
+.main-content{
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--gap);
+
+}
+
+.section{
+    min-height: 100vh;
+    display: block;
+    
+}
+
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index:1;
+    border-bottom:0.1rem solid var(--terciary-color);
+}
+
+.menu-content{
+    display:flex ;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.menu h1{
+    font-size: 2.3rem;
+    color: var(--primary-color);
+}
+
+.menu h1 a{
+    color: inherit;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background: var(--quarternary-color) ;
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after{
+    width: 50%;
+    left: 25%;
+
+}
+
+.logo{
+   width: 200px;
+   max-width: 100%;
+   height: auto;
+}
+
+.menu-spacing{
+    height: 65px;
+}
+
+.sobre-content{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    gap: var(--gap);
+    min-height: 100vh;
+    height: auto;
+    
+}
+
+.sobre-text-content, .sobreimg{ 
+    display: flex;
+    flex-direction: column;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin-left: 0;
+
+}
+
+
+
+
+.sobreimg img{
+
+    max-width: 80%;
+    max-height: auto;
+    border-radius: 50px ;
+}
+
+.cartas-content{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    justify-content: flex-start; 
+    padding-top:8rem ;
+  
+}
+
+.cartas-content h2{
+    justify-content: center;
+}
+
+.grid-cartas{
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    gap: var(--gap);
+
+}
+
+.grid-cartas article p::before {
+    content: "• ";       
+    color: var(--white-color);  
+    font-size: 2.5rem;   
+    margin-right: 1rem;  }
+
+.grid-cartas h3{
+    font-size: 4rem;
+}
+
+.personagens-content{
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+
+}
+
+.grid-personagens{
+    display: grid;
+    grid-template-columns: repeat(3,1fr) ;
+    gap: var(--gap);
+}
+
+.grid-personagens h3{
+    font-size: 4rem;
+}
+
+.grid-galeria{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,20rem);
+    gap: var(--gap);
+}
+
+.galeria-img{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+    transform: scale(1);
+}
+
+.galeria-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5rem;
+   
+}
+
+.galeria-img:hover{
+    transform: scale(1.1);
+    border-radius: 5rem;
+
+}
+
+.sobre-text-content h3{
+    font-size:3rem;
+}
+
+.Contato{
+    grid-column: span 2;
+}
+
+.Contato .form-grid{
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+
+.form-group{
+ 
+    flex: 1 1 320px;
+
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:10px;
+}
+
+.form-group input, 
+.form-group textarea{
+    border: none;
+    font-size: 1.5rem;
+    background: var(--white-color);
+    padding: 1.5rem 2rem;
+    width: 100%;
+
+}
+
+.form-group input:focus, 
+.form-group textarea:focus{
+    box-shadow: 8px 8px 2px var(--terciary-color);
+
+}
+
+ .form-group.full-width{
+    width: 100%;
+    flex:  1 1 100%;
+    
+}
+
+.form-group button{
+    border:  0.2rem solid var(--white-color);
+    color: var(--white-color);
+    background: none;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.form-group button:hover{
+    background: var(--white-color);
+    color: var(--terciary-color);
+}
+
+.form-group ::placeholder{
+    color: var(--pink-gray);
+}
+
+legend h3{
+    font-size: 3.5rem;
+    padding-bottom: 10px;
+}
+
+.footer{
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.footer a{
+    color: #ddb1cc;
+}
+
+.heart{
+    color: #b44040;
+}
+
+.footer p{
+    margin: 0;
+    padding: 2rem;
+
+}
+
+.Fechar-menu{
+    display: none;
+}
+
+.back-to-top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--pink-dark);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:var(--quarternary-color);
+    border: 0.1rem solid var(--secundary-color);
+}
+
+@media(max-width:800px){
+     .grid-cartas, .grid-personagens{
+        grid-template-columns:1fr;
+    }
+
+     
+
+    .galeria-img{
+        width: 100%;
+        max-width:100%;
+        max-height: auto;
+        padding-bottom: 10px;
+
+    }
+
+    .galeria-img img{
+        max-width: 100%;
+        width: 90%;
+       
+    }
+
+    .grid-galeria{
+        display: block;
+    }
+
+    .galeria-img:hover{
+    transform: scale(1.1);
+    border-radius: 1.5rem;
+    }
+
+    .menu{
+        bottom: 0;
+        text-align: center;
+    }
+
+    .menu-content, .menu-content ul{
+        flex-direction:column ;
+        justify-content: center;
+    }
+
+    .menu-content{
+        height: 100vh;
+     }
+
+    .menu{
+        display: none;
+
+    }
+
+    
+
+    .Fechar-menu-label::after {
+        content:'☰' ;
+        position: fixed;
+        z-index: 2;
+        top:1rem;
+        right: 1rem;
+        background: var(--pink-dark) ;
+        color: var(--primary-color);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .Fechar-menu:checked~.menu {
+        display: block;
+
+
+    }
+
+    .Fechar-menu:checked~.Fechar-menu-label::after{
+        display: block;
+        content: '×';
+    }
+
+    .menu-spacing{
+        display: none;
+    }
+
+    #sobre .sobre-content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+    }
+
+    #sobre .sobreimg {
+        margin-top: 2rem;
+        width: 80%;
+        max-width: 400px;
+        order: 2;
+        align-self: center;
+    }
+
+   
+    #contato .sobre-content {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+    }
+
+    #contato .sobreimg {
+        margin-top: 2rem;
+        width: 80%;
+        max-width: 400px;
+        order: 2;
+        align-self: center;
+    }
+
+   
+    #contato .Contato {
+        order: 3;
+        width: 100%;
+    }
+
+    
+
+
+
+
+
+
+
+
+
+
+
+}
+
